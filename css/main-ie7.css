@@ -1,0 +1,112 @@
+.mainHeader nav { 
+	overflow: hidden;
+}
+
+.mainHeader li {
+	display: inline;
+	zoom:1;
+	overflow: hidden;
+}
+
+.mainHeader ol {
+	display: block;
+	position: relative;
+	height: 36px;	
+	overflow: hidden;
+	z-index: expression(runtimeStyle.zIndex = 1, function(node) {	
+		var	list = node.childNodes, i = list.length, iWidth = node.offsetWidth/i;
+	
+			while(i--) {
+				list[i].style.width = iWidth+"px";
+			}
+			node.style.width=node.offsetWidth+10+"px";
+		}(this));)
+}
+.mainHeader li span,
+.mainHeader li a {
+	width: auto;
+	height: auto;
+	display: block;
+	line-height: 17px;
+	z-index: expression(runtimeStyle.zIndex = 1, this == ((36/2)-parseInt(offsetHeight)/2) <0 ? (style.paddingTop="0",style.height="36px") : (style.paddingTop=(36/2)-(parseInt(offsetHeight)/2) +"px", style.height="36px")); /* вертикальное выравнивание */
+}
+body {
+	z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('beforeEnd', '<span class="bodyAfter"></span>'));
+}
+.bodyAfter {
+	content: "";
+	width: 100%;
+	min-width: 1200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/header-back.png);
+	height: 47px;	
+}
+.mainContent {
+	z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('beforeEnd', '<span class="mainContentAfter"></span>'));
+}
+.mainContentAfter {
+	content: "";
+	background: #eaeae5;
+	width: 698px;
+	height: 1px;
+	position: absolute;
+	top: 1px;
+	right: 0;	
+}
+.subMenu .android:hover{
+	background:url(../img/android.jpg) 0 -77px;
+}
+.subMenu .windows:hover {
+	background:url(../img/windows.jpg) 0 -77px;
+}
+.subMenu .aple:hover {
+	background:url(../img/aple.jpg) 0 -77px;
+}
+.subMenu .blackBerry:hover {
+	background:url(../img/black-berry.jpg) 0 -77px;
+}
+.mainHeader nav {
+	z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('beforeEnd', '<span class="mainHeaderOlAfter"></span><span class="mainHeaderOlBefore"></span>'));
+}
+.mainHeaderOlAfter {
+	background: url(../img/circle.png);
+	width: 4px;
+	height: 38px;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	z-index: 100;
+}
+.mainHeaderOlBefore {
+	background: url(../img/circle.png) -4px 0;
+	width: 4px;
+	height: 38px;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	z-index: 100;
+}
+.mainHeader li span,
+.mainHeader a {
+	z-index: 0;
+}
+#mobile {
+	z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('beforeEnd', '<span class="mobileAfter"></span>'));
+}
+.mobileAfter {
+	content: "";
+	background:url(../img/phone-bottom.jpg);
+	width: 313px;
+	height: 213px;
+	position: absolute;
+	bottom: -213px;
+	left: 7px;
+}
+.news section div {
+	zoom: 1;
+}
+.mainContent .content div {
+	zoom: 1;
+}

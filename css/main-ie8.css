@@ -1,0 +1,49 @@
+.subMenu a span {
+	display: none;	
+}
+.subMenu li:hover span{
+	display: block;	
+}
+.content,
+.news section,
+.subMenu a,
+.subMenu li,
+.mainContent,
+.mainHeader nav,
+.mainHeader section {
+	behavior: url(css/pie.htc);
+}
+.mainFooter address {
+	position: absolute;
+	-ms-filter: filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10);
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10);
+}
+.copyright {
+	-ms-filter: filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10);
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10);
+}
+.subMenu li:hover a span {
+	display:none;
+}
+.subMenu .android:hover {
+	background:url(../img/android.jpg) 0 -77px;
+}
+.subMenu .windows:hover {
+	background:url(../img/windows.jpg) 0 -77px;
+}
+.subMenu .aple:hover {
+	background:url(../img/aple.jpg) 0 -77px;
+}
+.subMenu .blackBerry:hover {
+	background:url(../img/black-berry.jpg) 0 -77px;
+}
+.mainHeader nav:before {
+	content: "";
+	background: url(../img/circle.png) -4px 0;
+	width: 4px;
+	height: 38px;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	z-index: 100;
+}

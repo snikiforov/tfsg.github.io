@@ -1,0 +1,13 @@
+.mainHeader li span,
+.mainHeader a {
+	z-index: -1;
+}
+.mainHeader .lastChild,
+.mainHeader li:first-child span,
+.mainHeader li:first-child a {
+	behavior: url(css/pie.htc);
+	position: relative;
+}
+.mainHeader .lastChild {
+	border-radius: 0 5px 5px 0;
+}
